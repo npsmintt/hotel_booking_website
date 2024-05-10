@@ -1,4 +1,5 @@
 Hotel booking website for both customers and hotel employee (Receptionist & Housekeeper)
+Codes are the example for customer pages
 
 Customer Requirements
 - Pages: hotel descriptions, attractions, facilities & rooms, room rates, booking pages
