@@ -1,0 +1,395 @@
+.holiday-decor {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 5% 0;
+}
+
+.booking-reference {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reference-title {
+  margin: 3%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.reference-box {
+  background-color: #e7e6e0;
+  padding: 5% 5% 8% 15%;
+  border-radius: 5px;
+  width: 55%; 
+}
+
+.detailed-msg {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  font-size: 25px;
+}
+
+.booking-msg {
+  padding: 20px;;
+border: solid 1px #4c4a47;
+border-radius: 5px;
+font-size: 25px;
+width: 50%;
+}
+
+
+
+.welcome-msg {
+  width: 80%;
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+
+.thank-you-msg {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.thank-you-msg img {
+  width: 20%;
+  height: 20%;
+  object-fit: cover;
+  position: relative;
+  left: 40%;
+  transform: translateX(-60%);
+}
+
+.vertical-hr {
+  margin:0 20px;
+}
+
+.vertical-info {
+  margin-bottom: 10px;
+  text-align: start;
+}
+.check {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.check p {
+  font-size: 20px;
+}
+.check small {
+  font-size: 10px;
+}
+.btn {
+  margin: 5%;
+}
+.check-date small {
+  font-size: 15px;
+}
+button {
+  width: 8em;
+  height: 2.5em;
+  border-radius: 1em;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #3b3633;
+  color: #f0eddf;
+}
+
+button:hover {
+  background-color: #4c4a47;
+  transform: scale(1.05);
+  transition: 0.45s;
+}
+
+#santa {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  transition: 0.2s ease-out;
+  z-index: -1;
+}
+
+#santa img{
+  width: 140px;
+  filter: drop-shadow(0 0 20px rgb(1, 1, 42, 0.2));
+}
+
+@media only screen and (max-width: 768px) {
+
+  .holiday-decor{
+    position: relative;
+    left: 70%;
+  }
+  
+  .holiday-decor img{
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+  }
+  
+  .booking-reference {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .reference-title {
+    padding-bottom: 30px;
+    font-size: 0.6em;
+  }
+
+  .thank-you-msg {
+    font-size: 1em;
+  }
+  .reference-box {
+    max-width: 100%;
+    padding: 30px;
+  }
+
+  .detailed-msg {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .booking-msg {
+    font-size: 0.7em;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .welcome-msg {
+    width: 100%;
+    font-size: 0.6em;
+  }
+
+  .check {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .check p{
+    font-size: 0.8em;
+  }
+
+  .check small {
+    font-size: 0.7em;
+  }
+
+  .vertical-hr {
+    display: block;
+  }
+
+  .vertical-info {
+    margin-bottom: 20px;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 968px) {
+  .holiday-decor{
+    position: relative;
+    left: 70%;
+  }
+  
+  .holiday-decor img{
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+  }
+  
+  .booking-reference {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .reference-title {
+    padding-bottom: 30px;
+    font-size: 0.6em;
+  }
+
+  .thank-you-msg {
+    font-size: 1em;
+  }
+  .reference-box {
+    max-width: 100%;
+  }
+
+  .detailed-msg {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .booking-msg {
+    font-size: 0.7em;
+    margin-top: 10px;
+  }
+
+  .welcome-msg {
+    width: 100%;
+    font-size: 0.6em;
+  }
+
+  .check {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .check p{
+    font-size: 0.8em;
+  }
+
+  .check small {
+    font-size: 0.7em;
+  }
+
+  .vertical-hr {
+    display: block;
+  }
+
+  .vertical-info {
+    margin-bottom: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 1200px) {
+  .holiday-decor{
+    position: relative;
+    left: 70%;
+  }
+  
+  .holiday-decor img{
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+  }
+  
+  .booking-reference {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .reference-title {
+    padding-bottom: 30px;
+    font-size: 0.6em;
+  }
+
+  .thank-you-msg {
+    font-size: 1em;
+  }
+  .reference-box {
+    max-width: 100%;
+  }
+
+  .detailed-msg {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .booking-msg {
+    font-size: 0.7em;
+    margin-top: 10px;
+  }
+
+  .welcome-msg {
+    width: 100%;
+    font-size: 0.6em;
+  }
+
+  .check {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .check p{
+    font-size: 0.8em;
+  }
+
+  .check small {
+    font-size: 0.7em;
+  }
+
+  .vertical-hr {
+    display: block;
+  }
+
+  .vertical-info {
+    margin-bottom: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 1000px) {
+  .holiday-decor{
+    position: relative;
+    left: 70%;
+  }
+  
+  .holiday-decor img{
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+  }
+  
+  .booking-reference {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .reference-title {
+    padding-bottom: 30px;
+    font-size: 0.6em;
+  }
+
+  .thank-you-msg {
+    font-size: 1em;
+  }
+  .reference-box {
+    max-width: 100%;
+  }
+
+  .detailed-msg {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .booking-msg {
+    font-size: 0.7em;
+    margin-top: 10px;
+  }
+
+  .welcome-msg {
+    width: 100%;
+    font-size: 0.6em;
+  }
+
+  .check {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .check p{
+    font-size: 0.8em;
+  }
+
+  .check small {
+    font-size: 0.7em;
+  }
+
+  .vertical-hr {
+    display: block;
+  }
+
+  .vertical-info {
+    margin-bottom: 20px;
+  }
+
+}

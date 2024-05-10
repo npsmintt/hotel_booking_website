@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The Crown Hotel</title>
+        <!-- CSS for header & footer -->
+        <link href="../css/header-footer.css" rel="stylesheet">
+        <!-- icon from fontawesome -->
+        <script src="https://kit.fontawesome.com/cc44fc4986.js" crossorigin="anonymous"></script>
+        <!-- import font family GFS Didot -->
+        <link href="https://fonts.cdnfonts.com/css/gfs-didot" rel="stylesheet">
+        <link rel="icon" href="/images/logo_hotel_black.png" type="image/icon type">
+        <!-- hambuger -->
+        <script src="../js/toggle-bar.js" defer></script>
+        <!-- page-specific CSS stylesheet -->
+        <link rel="stylesheet" href="../css/booking-details.css">
+        <!-- page js -->
+        <!-- <script src="../js/manage-booking.js" defer></script> -->
+    </head>
+    <body>
+        <header id="navbar">
+            <nav class="navbar-container container">
+                <a href="/" class="home-link"><img src="../images/logo_hotel_black.png" alt="Home"></a>
+                <!-- begin toggle button -->
+                <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <!-- end toggle button -->
+                <div id="navbar-menu" aria-labelledby="navbar-toggle">
+                <ul class="navbar-links">
+                    <li class="navbar-item"><a class="navbar-link" href="/about-us">About Us</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/rooms-facilities">Rooms & Facilities</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/attractions">Attractions</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/manage-booking">Manage Booking</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/support">Support</a></li>
+                    <li class="navbar-item"><a id="bookAStayLink" class="navbar-link" href="/booking">Book a Stay</a></li>
+                </ul>
+                </div>
+            </nav>
+        </header>
+         <main>
+                <div class="booking-reference">
+                    <div class="reference-title">
+                        <h1>Booking Reference: <%= b_ref %></h1>
+                    </div>
+                    <div class="reference-box">
+                        <div class="column1">
+                            <div class="thank-you-msg">
+                                <h3 id="booking-title">Booking Details </h3>
+                            </div>
+                            <div class="check">
+                                <div class="check-in-date">
+                                    <h3 class="check-title"><b>Check In: </b></br></h3>
+                                    <p class="date"><%= mappedBookDetail ? mappedBookDetail.checkin : '' %></p>
+                                    <small>From 15:00</small>
+                                </div>
+                                <hr class="vertical-hr">
+                            <div class="check-out-date">
+                                    <h3 class="check-title"><b>Check Out:</b></br></h3>
+                                    <p class="date"><%= mappedBookDetail ? mappedBookDetail.checkout : '' %></p>
+                                    <small>Until 16:00</small>
+                                </div> 
+                            </div>
+                            <div>
+                                <div>
+                                    <p> Name    : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= mappedBookDetail ? mappedBookDetail.c_name : '' %></p>
+                                    <p> Address : &nbsp&nbsp<%= mappedBookDetail ? mappedBookDetail.c_address : '' %></p>
+                                    <p> Email   : &nbsp&nbsp&nbsp&nbsp&nbsp<%= mappedBookDetail ? mappedBookDetail.c_email : '' %></p>
+                                    <hr class="h-line">
+                                    <% roomCounts.forEach(roomCount => { %>
+                                        <p class="room-types"><%= roomCount.r_class %> x <%= roomCount.count %></p>
+                                    <% }); %>
+                                    <h3 class="cost"> Total   : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp£<%= mappedBookDetail ? mappedBookDetail.b_cost : '' %></h3>
+                                </div>                          
+                            </div>
+                        </div>
+                        <div class="vertical-line"></div>
+                        <div class="column2">
+                            <div>
+                                <p id="add-room">Add a room to your booking</p>
+                                <form id="add-room-form" class="hide">
+                                    <label for="room-type" id="label">Select Room Type:</label>
+                                    <select name="room-type" id="room-type">
+                                        <option value="select" selected disabled>Select Room Type</option>
+                                        <option value="std_d">Standard Double Room</option>
+                                        <option value="std_t">Standard Twin Room</option>
+                                        <option value="sup_d">Superior Double Room</option>
+                                        <option value="sup_t">Superior Twin Room</option>
+                                    </select>                                
+                                    <button type="submit" id="add-room-button">Add Room</button>
+                                </form>
+                                <p id="cancel-booking"> Cancel your booking </p>
+                                <hr>
+                                <div>
+                                    <p>Need Help?</p>
+                                    <a href="../html/support.html" id="support_link">Contact Customer Support</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button id="back-to-home" onclick="location.href='/'">
+                            Back to Home
+                        </button>
+                    </div>
+                </div>
+        </main>
+        <!-- end content -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <a href="/">
+                                <img class="footer-logo" src="/images/logo_hotel_white.png" alt="Home">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>HOTEL</h4>
+                        <ul>
+                            <li><a href="/about-us">About Us</a></li>
+                            <li><a href="/rooms-facilities">Our Rooms</a></li>
+                            <li><a href="/rooms-facilities">Our facilities</a></li>
+                            <li><a href="/attractions">Attractions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>HELP CENTER</h4>
+                        <ul>
+                            <li><a href="/support">Contact us & FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>CONTACT INFO</h4>
+                        <ul>
+                            <li><p>Phone: +44 1234 567 890</p></li>
+                            <li><p>Email: <a href="mailto:contact@crownhotel.co.uk">contact@crownhotel.co.uk</a></p></li>
+                            <li><p>Location: 100 Smart Street, Norwich, UK</p></li>
+                        </ul>
+                        <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023  The Crown Hotel | All rights reserved</p>
+            </div>
+         </footer>
+         <script>
+            document.getElementById('cancel-booking').addEventListener('click', async function () {
+    
+                try {
+                    const response = await fetch(`/cancel-booking/<%= b_ref %>`, {
+                        method: 'DELETE',
+                    });
+
+                    if (response.ok) {
+                        const result = await response.json();
+                        alert(result.message);
+                        window.history.back();
+                    } else {
+                        console.error('Error:', response.statusText);
+                    }
+                } catch (error) {
+                    console.error('Error:', error.message);
+                }
+            });
+
+            document.getElementById('add-room').addEventListener('click', function () {
+                const addRoomForm = document.getElementById('add-room-form');
+                addRoomForm.classList.toggle('show');
+            });        
+            
+            document.getElementById('add-room-button').addEventListener('click', async function () {
+                const selectedRoomType = document.getElementById('room-type').value;
+
+                alert("Thank you. The room has been added to your booking.")
+                
+                try {
+                    const response = await fetch(`/add-room/<%= b_ref %>/${selectedRoomType}`, {
+                        method: 'POST',
+                    });
+                    
+                    if (response.ok) {
+                        const result = await response.json();
+                        alert(result.message);
+                        window.location.reload();
+                    } else {
+                        const errorMessage = await response.json();
+                        console.error('Error:', errorMessage);
+                    }
+                } catch (error) {
+                    console.error('Error:', error.message);
+                }
+                window.location.reload();
+            });
+
+         </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+
+main {
+  margin: 0 0 50px 0;
+  position: relative;
+}
+h1 {
+    font-size: 110px;
+}
+#content {
+  margin: 8% 8% 20% 8%;
+  padding-bottom: 8%;
+}
+
+/* Banner */
+.img-container {
+    height: 700px;
+  background-image: url(../images/banner002.jpg);
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Text on Banner alignment */
+.inner-container {
+    text-align: center;
+    width: 100%;
+    color: #F0EDDF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 3px #454545, 0 0 5px #3b3b3b; 
+}
+
+#main_title {
+    font-size: 100px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.title {
+    margin: 0 0 20px 0;
+    font-size: 30px;
+}
+
+#form {
+    margin-bottom: 12%;
+}
+
+label {
+    font-size: 23px;
+}
+
+.input {
+    padding: 10px;
+    width: 88%;
+    height: 45px;
+    font-size: 16px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+#mobile {
+    width: 300px;
+}
+
+#message {
+    height: 100px;
+    border-radius: 5px;
+}
+
+#send {
+    border: none;
+    height: 45px;
+    color: white;
+    background-color: black;
+    width: 180px;
+    border-radius: 8px;
+    margin: 25px 0 10px;
+    font-size: 20px;
+}
+
+#send:hover {
+    background-color: #5a5a5a;
+}
+
+#send:active {
+    background-color: #292929;
+}
+
+#map {
+    height: 360px;
+    width: 460px;
+    border-radius: 5px;
+}
+
+h3 {
+    font-size: 25px;
+    margin: 20px 0 20px;
+}
+
+h5 {
+    font-size: 21px;
+    margin: 10px 0 10px;
+}
+
+.faq {
+    /* font-size: 18px;
+    line-height: 25px;
+    margin: 20px 0 15px; */
+    height: 0;
+    overflow: hidden;
+}
+
+.showFaq {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 20px 0 15px;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+}
+
+main {
+    display: block;
+    flex: 0 0 auto;
+}
+
+.faq-group {
+    display: flex;
+     /* Add flex display for larger screens */
+     flex-direction: column;
+     /* Space out the content on smaller screens */
+     padding: 1em;
+    margin: 30px 0 30px;
+}
+
+/* Media query for screens with width 768px or less */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .img-container {
+        height: 200px;
+    }
+    .column {
+        width: 100%; /* Set to 100% for screens 768px or less */
+    }
+    .input,
+    #mobile,
+    #send,
+    #map {
+        width: 100%; /* Set to 100% for screens 768px or less */
+    }
+
+    .faq-group {
+        flex-direction: column; /* Change flex direction for smaller screens */
+    }
+}

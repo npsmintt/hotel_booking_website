@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Crown Hotel</title>
+    <!-- CSS for header & footer -->
+    <link href="../css/header-footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/payment.css">
+        <!-- icon from fontawesome -->
+    <script src="https://kit.fontawesome.com/cc44fc4986.js" crossorigin="anonymous"></script>
+    <!-- import font family GFS Didot -->
+    <link href="https://fonts.cdnfonts.com/css/gfs-didot" rel="stylesheet">
+    <link rel="icon" href="images/logo_hotel_black.png" type="image/icon type">
+    <!-- hambuger -->
+    <script src="/js/toggle-bar.js" defer></script>
+
+</head>
+
+<body>
+    <header id="navbar">
+        <nav class="navbar-container container">
+            <a href="/" class="home-link"><img src="../images/logo_hotel_black.png" alt="Home"></a>
+            <!-- begin toggle button -->
+            <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <!-- end toggle button -->
+            <div id="navbar-menu" aria-labelledby="navbar-toggle">
+            <ul class="navbar-links">
+                <li class="navbar-item"><a class="navbar-link" href="/about-us">About Us</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/rooms-facilities">Rooms & Facilities</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/attractions">Attractions</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/manage-booking">Manage Booking</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/support">Support</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/booking">Book a Stay</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+      <div class="reservation">
+            <div class="contact-detail">
+            <form>
+                <table>
+        <tr>
+            <td colspan="3">
+                <h2>Contact Details</h2>
+            </td>
+        </tr>
+        <!-- Name -->
+        <tr>
+            <td>
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name">
+            </td>
+            <td>
+                <label for="middleName">Middle Name</label>
+                <input type="text" id="middleName" name="middleName" placeholder="Middle Name">
+            </td>
+            <td>
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+            </td>
+        </tr>
+        <!-- Email and Phone number -->
+        <tr>
+            <td>
+                <label for="email">Email *</label>
+                <input type="text" id="email" name="email" placeholder="Email">
+            </td>
+            <td colspan="2">
+                <label for="mobileNumber">Mobile Number *</label>
+                <div class="select-country-tel">
+                    <input id="mobileNumber" class="input" type="tel" name="mobile" placeholder="Mobile Number" required/>
+                </div>
+            </td>
+        </tr>
+        <!-- Date of Birth, City, Postcode -->
+        <tr>
+            <td>
+                <label for="birthDate">Date of Birth</label>
+                <input type="date" id="birthDate" name="birthDate" required/>
+            </td>
+            <td>
+                <label for="city">City *</label>
+                <input id="city" class="input" type="text" name="city" placeholder="City" required/>
+            </td>
+            <td>
+                <label for="postcode">Postcode *</label>
+                <input type="text" id="postcode" name="postcode" placeholder="Postcode" required/>
+            </td>
+        </tr>
+        <!-- Full Address -->
+        <tr>
+            <td colspan="3">
+                <label for="fullAddress">Full Address</label>
+                <textarea id="fullAddress" name="fullAddress"></textarea>
+            </td>
+        </tr>
+        <!-- Special Requirements -->
+        <tr>
+            <td colspan="3">
+                <label for="specialRequirements">Special Requirements</label>
+                <textarea id="specialRequirements" name="specialRequirements"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <hr>
+            </td>
+        </tr>
+        <!-- Payment Details -->
+        <tr>
+            <td colspan="3">
+                <h2>Payment Details</h2>
+                <small>Important note: payment will be collected after check-out</small>
+            </td>
+        </tr>
+        <!-- Card Number -->
+        <tr>
+            <td colspan="3">
+                <label for="cardNumber">Card Number *</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number" required/>
+            </td>
+        </tr>
+        <!-- Cardholder's Name, Expiry Date, CVC -->
+        <tr>
+            <td>
+                <label for="cardHolderName">Cardholder's Name *</label>
+                <input type="text" id="cardHolderName" name="cardHolderName" placeholder="Cardholder's Name" required/>
+            </td>
+            <td>
+                <label for="expiryDate">Expiry Date *</label>
+                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required/>
+            </td>
+            <td>
+                <label for="cvc">CVC *</label>
+                <input type="text" id="cvc" name="cvc" placeholder="CVC" required/>
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+    </div>
+    <hr>
+    <!-- Second Sub-Div: Price Info (Vertical) -->
+    <div class="price-info">
+        <!-- Number of rooms, Total price, and Proceed to Pay button -->
+        <div class="vertical-info">
+            <h1>Booking Details</h1>
+        </div>
+        <div class="check">
+            <div class="check-in-date">
+                <h3><b>Check In: </b></br></h3>
+                <p><%= checkInDate %></p>
+                <small>From 15:00</small>
+            </div>
+            <hr class="vertical-hr">
+           <div class="check-out-date">
+                <h3><b>Check Out:</b></br></h3>
+                <p><%= checkOutDate %></p>
+                <small>Until 16:00</small>
+            </div> 
+        </div>
+        <hr class="horizontal-hr">
+        <div class="vertical-info">
+            <small>Total nights: <%= numberOfNights %> night(s)</small>
+        </div>
+        <div class="vertical-info" id="total-price">
+            <div>
+                <p>Total:</p>   
+            </div>
+            <div id="sum-price">
+                <p>£<%= totalPrice %></p>
+            </div> 
+        </div>
+        <div class="vertical-info">
+            <small>Includes taxes and charges</small>
+        </div>
+        <button id="finishBooking">Finish Booking</button>
+    </div>
+</div>  
+    </main>
+    <!-- end content -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <a href="/">
+                            <img class="footer-logo" src="/images/logo_hotel_white.png" alt="Home">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>HOTEL</h4>
+                    <ul>
+                        <li><a href="/about-us">About Us</a></li>
+                        <li><a href="/rooms-facilities">Our Rooms</a></li>
+                        <li><a href="/rooms-facilities">Our facilities</a></li>
+                        <li><a href="/attractions">Attractions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>HELP CENTER</h4>
+                    <ul>
+                        <li><a href="/support">Contact us & FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>CONTACT INFO</h4>
+                    <ul>
+                        <li><p>Phone: +44 1234 567 890</p></li>
+                        <li><p>Email: <a href="mailto:contact@crownhotel.co.uk">contact@crownhotel.co.uk</a></p></li>
+                        <li><p>Location: 100 Smart Street, Norwich, UK</p></li>
+                    </ul>
+                    <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2023  The Crown Hotel | All rights reserved</p>
+        </div>
+     </footer>
+     <script src="/js/homepage-button.js" defer></script>
+     <script src="/js/booking-button.js" defer></script>
+     <script src="/js/payment-button.js" defer></script>
+</body>
+
+</html>

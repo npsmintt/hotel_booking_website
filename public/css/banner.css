@@ -1,0 +1,45 @@
+/* Begin css for banner */
+.img-container {
+  /* put your image here */
+
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.inner-container {
+  text-align: center;
+  width: 100%;
+  color: #f0eddf;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+h1 {
+  
+  opacity: 80%;
+  text-shadow: 6px 2px 20px black;
+}
+/* responsive */
+@media only screen and (max-width: 1000px) {
+  .img-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h1 {
+    font-size: 60px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .img-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
+/* end css for banner */

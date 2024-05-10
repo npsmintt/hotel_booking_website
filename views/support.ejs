@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The Crown Hotel</title>
+        <!-- CSS for header & footer -->
+        <link href="/css/header-footer.css" rel="stylesheet">
+        <!-- CSS for banner -->
+        <link rel="stylesheet" href="/css/banner.css">
+        <!-- page-specific stylesheet -->
+        <link href="/css/support.css" rel="stylesheet">
+        <!-- icon from fontawesome -->
+        <script src="https://kit.fontawesome.com/cc44fc4986.js" crossorigin="anonymous"></script>
+        <!-- import font family GFS Didot -->
+        <link href="https://fonts.cdnfonts.com/css/gfs-didot" rel="stylesheet">
+        <link rel="icon" href="/images/logo_hotel_black.png" type="image/icon type">
+        <!-- hambuger -->
+        <script src="/js/toggle-bar.js" defer></script>
+        <!-- mobile number country code drop-down  -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js" defer></script>
+        <script src = "/scripts/tel.js" defer></script>
+        <!-- js to toggle show/hide faqs -->
+        <script src = "/js/showfaq.js" defer></script>
+    </head>
+    <body>
+        <header id="navbar">
+            <nav class="navbar-container container">
+                <a href="/" class="home-link"><img src="../images/logo_hotel_black.png" alt="Home"></a>
+                <!-- begin toggle button -->
+                <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <!-- end toggle button -->
+                <div id="navbar-menu" aria-labelledby="navbar-toggle">
+                <ul class="navbar-links">
+                    <li class="navbar-item"><a class="navbar-link" href="/about-us">About Us</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/rooms-facilities">Rooms & Facilities</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/attractions">Attractions</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/manage-booking">Manage Booking</a></li>
+                    <li class="navbar-item active"><a class="navbar-link" href="/support">Support</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/booking">Book a Stay</a></li>
+                </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- put your content here -->
+         <main>
+             <div class="img-container">
+            <div class="inner-container">
+                <!-- insert text -->
+                <h1>SUPPORT</h1><br>
+                <!-- end text -->
+            </div>
+        </div>
+            <div id="content">
+                <div class="column">
+                    <h2 class="title">Contact Form</h2>
+                    <div id="form">
+                        <form action="" id="form">
+                            
+                                <label>Full Name*:
+                                    <br>
+                                    <input class="input" type="text" name="name" placeholder="Full Name" required/>
+                                </label>
+                                <br>
+                                <br>
+                                <label>Mobile Number:
+                                    <br>
+                                    <input id="mobile" class="input" type="tel" name="mobile" placeholder="Mobile Number" required/>
+                                </label>
+                                <br>
+                                <br>
+                                <label>Email Address*:
+                                    <br>
+                                    <input class="input" type="email" name="email" placeholder="example@email.com" required/>
+                                </label>
+                                <br>
+                                <br>
+                                <label>Message*:
+                                    <br>
+                                    <textarea id="message" class="input" name="message" required rows="7" cols="30"> </textarea>
+                                </label>
+                            
+                                <button ID="send">Send Message
+                                </button>
+                                <script>
+                                    document.getElementById("send").addEventListener("click", function () {
+  alert("Your support request was submitted successfully.");
+});
+
+                                </script>
+                            
+                        </form>
+                    </div>
+                    <div>
+                        <img id="map" src="/images/map.png" alt="A map showing the location of the Crown Hotel.">
+                    </div>
+                  </div>
+                  <div class="column">
+                    <h2 class="title">Frequently Asked Questions</h2>
+                    <div class = "faq-group">
+                        <h3> Booking Process </h3>
+                        <div class = "question">
+                            <h5>How far in advance can I book?</h5>
+                            <p class="faq">You can make bookings up to 12 months in advance.</p>
+                            <hr>
+                        </div>
+                        <div class = "question">
+                            <h5>How do I book more than one room?</h5>
+                            <p class="faq">You can select the number of rooms using the drop-down menu next to each room on our booking page.</p>
+                            <hr>
+                        </div>
+                        <div class = "question">
+                            <h5>Is my booking guaranteed?</h5>
+                            <p class="faq">Your card details provided at the time of booking guarantees your booking.
+                                You can use your booking reference to view your booking once it has been made. To do this, click the Manage Booking link at the top of the website.</p>
+                                <hr>
+                        </div>
+                        <div class = "question">
+                            <h5>How do I know if my booking is confirmed?</h5>
+                            <p class="faq">You will receive a booking confirmation, including your booking reference. You can use your booking reference to view your booking details.</p>
+                            <hr>
+                        </div>
+                        <div class = "question">
+                            <h5>How do I change my booking?</h5>
+                            <p class="faq">You can change your booking by entering your booking reference on our manage booking page.</p>
+                            <hr>
+                        </div>
+                        <div class = "question">
+                            <h5>How do I cancel my booking?</h5>
+                            <p class="faq">You can cancel your booking by entering your booking reference on our manage booking page.</p>
+                            <hr>
+                        </div>
+                    </div>
+                    <div>
+                        <h3> About your stay </h3>
+                        <div class = "question">
+                            <h5>What is the check-in and check-out times?</h5>
+                            <p class="faq">You can check in any time after 3 p.m., and check out any time before 12 p.m..</p>
+                            <hr>
+                        </div>
+                        <div class = "question">
+                            <h5>Can I extend my stay?</h5>
+                            <p class="faq">Please speak to reception if you would like to extend your stay. The receptionist may be able arrange this for you, but this is not guaranteed, especially during busy seasons.</p>
+                            <hr>
+                        </div>
+                        <div class = "question">
+                            <h5>Are there accessible rooms?</h5>
+                            <p class="faq">The ground floor rooms have wheelchair access. Please contact us if you would like any special accessibility arrangements during your stay.</p>
+                            <hr>
+                        </div>
+                    </div>
+                    <div>
+                        <h3> Hotel information </h3>
+                        <div class = "question">
+                            <h5>Is there a restaurant at the hotel?</h5>
+                            <p class="faq">Yes - we have an award-winning restaurant serving breakfast, lunch and dinner. </p>
+                            <hr>
+                        </div>
+                        <div class = "question">
+                            <h5>Are pets allowed in the hotel?</h5>
+                            <p class="faq">Unfortunately we are not able to accommodate pets due to hygiene concerns.</p>
+                            <hr>
+                        </div>
+                        <div class = "question">
+                            <h5>Is there parking at the hotel?</h5>
+                            <p class="faq">Yes - you are welcome to use our customer car park for the duration of your stay</p>
+                            <hr>
+                        </div>
+                        <div class = "question">
+                            <h5>Can I arrange airport transfers with the hotel?</h5>
+                            <p class="faq">Please contact us if you would like us to book a taxi for you.</p>
+                            <hr>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </main>
+        <!-- end content -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <a href="/">
+                                <img class="footer-logo" src="/images/logo_hotel_white.png" alt="Home">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>HOTEL</h4>
+                        <ul>
+                            <li><a href="/about-us">About Us</a></li>
+                            <li><a href="/rooms-facilities">Our Rooms</a></li>
+                            <li><a href="/rooms-facilities">Our facilities</a></li>
+                            <li><a href="/attractions">Attractions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>HELP CENTER</h4>
+                        <ul>
+                            <li><a href="/support">Contact us & FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>CONTACT INFO</h4>
+                        <ul>
+                            <li><p>Phone: +44 1234 567 890</p></li>
+                            <li><p>Email: <a href="mailto:contact@crownhotel.co.uk">contact@crownhotel.co.uk</a></p></li>
+                            <li><p>Location: 100 Smart Street, Norwich, UK</p></li>
+                        </ul>
+                        <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023  The Crown Hotel | All rights reserved</p>
+            </div>
+         </footer>
+</body>
+</html>

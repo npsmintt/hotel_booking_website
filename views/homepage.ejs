@@ -1,0 +1,174 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/css/header-footer.css">
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="/css/banner.css">
+    <script src="https://kit.fontawesome.com/cc44fc4986.js" crossorigin="anonymous"></script>
+    <!-- import font family GFS Didot -->
+    <link href="https://fonts.cdnfonts.com/css/gfs-didot" rel="stylesheet">
+    <link rel="icon" href="images/logo_hotel_black.png" type="image/icon type">
+    <!-- hambuger -->
+    <script src="/js/toggle-bar.js" defer></script>
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="navbar">
+        <nav class="navbar-container container">
+            <a href="/" class="home-link"><img src="../images/logo_hotel_black.png" alt="Home"></a>
+            <!-- begin toggle button -->
+            <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <!-- end toggle button -->
+            <div id="navbar-menu" aria-labelledby="navbar-toggle">
+            <ul class="navbar-links">
+                <li class="navbar-item"><a class="navbar-link" href="/about-us">About Us</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/rooms-facilities">Rooms & Facilities</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/attractions">Attractions</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/manage-booking">Manage Booking</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/support">Support</a></li>
+                <li class="navbar-item"><a id="bookAStayLink" class="navbar-link" href="/booking">Book a Stay</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+    <!-- Banner-->
+        <div class="img-container" style="background-image: url(/images/banner-home.jpg)";>
+            <div class="inner-container">
+                <!-- insert text -->
+                <h1>The Crown Hotel</h1><br>
+                <h2>"Escape to luxury"</h2>
+                <!-- end text -->
+            </div>
+              <!-- Booking form -->
+              <div class="booking">
+                <form class="booking-form">
+                    <!-- Check in div -->
+                    <div class="booking-info">
+                        <div class="input-group">
+                            <label for="check-in">Check In: </label>
+                            <input type="date" id="checkInDate" required>
+                        </div>
+                    </div>
+                    <!-- Check out div -->
+                    <div class="booking-info">
+                        <div class="input-group">
+                            <label for="check-out">Check Out:</label>
+                            <input type="date" id="checkOutDate" required>
+                        </div>
+                    </div>
+                    <!-- Book now button -->
+                    <div class="booking-info">
+                        <button type="button" class="btn" id="bookNowButton">Book Now <i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Our best offers -->
+        <div class="offer">
+            <h1>Our Best Offers</h1>
+            <p>Discover opulence at its finest. Our best offer invites you to elevate your stay and experience unrivaled
+                luxury.</p>
+        </div>
+        <!-- Horizontal views -->
+        <!-- The following code snippet is based on the example provided by Brother K on www.billibilli.com.
+            Source: https://www.bilibili.com/video/BV1L84y1j7rx/?spm_id_from=333.788&vd_source=042ae0db2740603eb64388171bff4c96-->
+        <div class="scroll-view-container">
+            <!-- Slides with 4 items -->
+            <div id="slide">
+                <div class="item" style="background-image: url(/images/room1.jpg);">
+                    <div class="content">
+                        <div class="name"> Standard Double Room</div>
+                        <div class="desc">Indulge in comfort and convenience with our Standard Double Room, designed to make your stay unforgettable. Ideal for couples or solo travelers seeking a cozy retreat, this thoughtfully appointed room offers a perfect blend of functionality and relaxation.</div>
+                        <button class="viewMore">View More</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(/images/room2.jpg);">
+                    <div class="content">
+                        <div class="name"> Standard Twin Room</div>
+                        <div class="desc">Unwind in style with our Standard Twin Room, a perfect choice for travelers seeking flexibility and comfort. Whether you're on a getaway with a friend or family member, this well-appointed room is designed to cater to your needs with its thoughtful amenities.</div>
+                        <button class="viewMore">View More</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(/images/room4.jpg);">
+                    <div class="content">
+                        <div class="name"> Superior Double Room</div>
+                        <div class="desc">Immerse yourself in luxury and sophistication with our Superior Double Room, meticulously designed to offer a heightened level of comfort and style. Ideal for discerning travelers seeking a premium experience, this room promises an unforgettable stay with its upscale amenities and elegant touches.</div>
+                        <button class="viewMore">View More</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(/images/room3.jpg);">
+                    <div class="content">
+                        <div class="name"> Superior Twin Room</div>
+                        <div class="desc">Indulge in a superior level of comfort and sophistication with our Superior Twin Room, a perfect choice for travelers seeking a refined and spacious accommodation option. Designed with discerning guests in mind, this room offers an elevated experience with premium amenities and thoughtful touches.</div>
+                        <button class="viewMore">View More</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Buttons for controlling slides -->
+            <div class="buttons">
+                <div class="s_button">&lt;</div>
+                <div class="s_button">&gt;</div>
+            </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <a href="/">
+                                <img class="footer-logo" src="/images/logo_hotel_white.png" alt="Home">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>HOTEL</h4>
+                        <ul>
+                            <li><a href="/about-us">About Us</a></li>
+                            <li><a href="/rooms-facilities">Our Rooms</a></li>
+                            <li><a href="/rooms-facilities">Our facilities</a></li>
+                            <li><a href="/attractions">Attractions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>HELP CENTER</h4>
+                        <ul>
+                            <li><a href="/support">Contact us & FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>CONTACT INFO</h4>
+                        <ul>
+                            <li><p>Phone: +44 1234 567 890</p></li>
+                            <li><p>Email: <a href="mailto:contact@crownhotel.co.uk">contact@crownhotel.co.uk</a></p></li>
+                            <li><p>Location: 100 Smart Street, Norwich, UK</p></li>
+                        </ul>
+                        <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023  The Crown Hotel | All rights reserved</p>
+            </div>
+         </footer>
+<script src="/js/homepage-button.js" defer></script>
+<script src="/js/scroll-view.js" defer></script>
+
+</body>
+
+</html>

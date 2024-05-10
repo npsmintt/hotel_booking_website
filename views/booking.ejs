@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Crown Hotel</title>
+    <!-- CSS for header & footer -->
+    <link href="../css/header-footer.css" rel="stylesheet">
+    <!-- icon from fontawesome -->
+    <script src="https://kit.fontawesome.com/cc44fc4986.js" crossorigin="anonymous"></script>
+    <!-- import font family GFS Didot -->
+    <link href="https://fonts.cdnfonts.com/css/gfs-didot" rel="stylesheet">
+    <link rel="icon" href="images/logo_hotel_black.png" type="image/icon type">
+    <!-- hambuger -->
+    <script src="/js/toggle-bar.js" defer></script>
+    <link href="" rel="stylesheet">
+    <link rel="stylesheet" href="/css/banner.css">
+    <link rel="stylesheet" href="/css/booking.css">
+    <link rel="stylesheet" href="/css/homepage.css">
+    <!---Search Button-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+
+<body>
+ 
+    <header id="navbar">
+        <nav class="navbar-container container">
+            <a href="/" class="home-link"><img src="../images/logo_hotel_black.png" alt="Home"></a>
+            <!-- begin toggle button -->
+            <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <!-- end toggle button -->
+            <div id="navbar-menu" aria-labelledby="navbar-toggle">
+            <ul class="navbar-links">
+                <li class="navbar-item"><a class="navbar-link" href="/about-us">About Us</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/rooms-facilities">Rooms & Facilities</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/attractions">Attractions</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/manage-booking">Manage Booking</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/support">Support</a></li>
+                <li class="navbar-item active"><a class="navbar-link" href="/booking">Book a Stay</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner -->
+        <div class="img-container">
+            <div class="inner-container">
+                <!-- insert text -->
+                <h1>BOOK NOW</h1><br>
+                <!-- end text -->
+            </div>
+        </div>
+
+        <!-- Booking form -->
+        <div class="booking">
+            <form class="booking-form">
+                <!-- Check-in div -->
+                <div class="booking-info">
+                    <div class="input-group">
+                        <label for="check-in">Check In:</label>
+                        <input type="date" id="checkInDate" value="<%= checkInDate %>" required>
+                    </div>
+                </div>
+                <!-- Check-out div -->
+                <div class="booking-info">
+                    <div class="input-group">
+                        <label for="check-out">Check Out: </label>
+                        <input type="date" id="checkOutDate" value="<%= checkOutDate %>" required>
+                    </div>
+                </div>
+                <!-- Book now button -->
+                <div class="booking-info">
+                    <button type="button" id="bookNowButton" class="btn">Book Now <i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+        </div>
+
+
+<!-- Second Div: Reservation -->
+<% console.log('Debugging: rooms data on client side:', JSON.stringify(rooms)); %>
+
+<% console.log('Debugging: rooms data in EJS:', rooms); %>
+
+<% if (rooms && Array.isArray(rooms) && rooms.length > 0) { %>
+  <!-- Render rooms if available -->
+  <div class="info-found">
+    <h2><%= rooms.length %> rooms found:</h2>
+  </div>
+  <!-- Render individual rooms -->
+  <div class="reservation">
+    <!-- Iterate over rooms and display information -->
+    <% rooms.forEach(room => { %>
+      <div class="each-room" data-room-type="<%= room.r_class %>">
+        <div class="room-info">
+          <img src="../images/<%= room.r_class %>.png" alt="<%= room.full_class_name %>">
+          <div class="text-description">
+            <h2><%= room.full_class_name %></h2>
+            <p>Our rooms can comfortably accommodate two guests and include a double bed, private en-suite bathroom, tea and coffee-making facilities, and complimentary high-speed WIFI. Additionally, each room is equipped with a hair dryer, complimentary toiletries, and ample storage space. Ideal for both couples and solo travelers, our rooms offer a versatile and welcoming stay experience.</p>
+            <h3 id="roomPrice">Price: £ <%= room.price %></h3>
+            <!-- User input for choosing the number of rooms -->
+            <label for="numRooms">No. of Rooms:</label>
+           <input type="number" id="numRooms" name="numRooms" value="0" min="1" max="<%= room.room_count %>">
+           
+          </div>
+        </div>
+      </div>
+      <hr>
+    <% }); %>
+  </div>
+  <div class="payButton">
+    <button id="proceedToPay">Proceed to Pay</button>
+  </div>
+<% } else if (!checkInDate || !checkOutDate) { %>
+    <div class="special-title">
+        <h1>Christmas Special offers</h1>
+        <img src="https://media.giphy.com/media/sOEWiqfbr1GLqYoKbP/giphy.gif" alt="Christmas Lights">
+    </div>
+    <div class="scroll-view-container">
+        <!-- Slides with 4 items -->
+        <div id="slide">
+            <div class="item" style="background-image: url(/images/christmas-decorations-chewton-glen-2019-1.jpeg);">
+                <div class="content">
+                    <div class="name"> Festive Retreat Savings</div>
+                    <div class="desc">Unwrap the joy of savings! Enjoy a special Christmas discount on our luxurious rooms. Book now for a cozy and affordable holiday escape. Limited availability, so reserve your room today!</div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(/images/Tudor-Farmhouse-6-Copy.jpg);">
+                <div class="content">
+                    <div class="name"> Snowy Night Discount</div>
+                    <div class="desc">Let it snow discounts! Enjoy a special Christmas rate on our cozy rooms. Book now for a winter wonderland escape without breaking the budget. Limited availability, so act fast!</div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(/images/USE_vb1952501_Woolley-Christmas-Trail_Credit_Charlie-Britz-Photography-8.jpg);">
+                <div class="content">
+                    <div class="name"> Frosty Adventure Package</div>
+                    <div class="desc">Embrace the winter wonderland with our adventure-filled Christmas package. Enjoy outdoor activities, festive amenities, and warm accommodations. Book now for a thrilling holiday escape.</div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(/images/christmas.png);">
+                <div class="content">
+                    <div class="name"> Champagne & Cheers</div>
+                    <div class="desc">Ring in the New Year in style! Our package includes a luxurious stay, a bottle of champagne, and exclusive access to our New Year's Eve celebration. Book your glamorous getaway now!</div>
+                </div>
+            </div>
+        </div>
+        <!-- Buttons for controlling slides -->
+        <div class="buttons">
+            <div class="s_button">&lt;</div>
+            <div class="s_button">&gt;</div>
+        </div>
+<% } else { %>
+  <div class="no-rooms-message">
+    <p>No rooms are available. Please choose a check-in and check-out date</p>
+  </div>
+<% } %>
+
+
+
+</main>
+    <!-- end content -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <a href="/">
+                            <img class="footer-logo" src="/images/logo_hotel_white.png" alt="Home">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>HOTEL</h4>
+                    <ul>
+                        <li><a href="/about-us">About Us</a></li>
+                        <li><a href="/rooms-facilities">Our Rooms</a></li>
+                        <li><a href="/rooms-facilities">Our facilities</a></li>
+                        <li><a href="/attractions">Attractions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>HELP CENTER</h4>
+                    <ul>
+                        <li><a href="/support">Contact us & FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>CONTACT INFO</h4>
+                    <ul>
+                        <li><p>Phone: +44 1234 567 890</p></li>
+                        <li><p>Email: <a href="mailto:contact@crownhotel.co.uk">contact@crownhotel.co.uk</a></p></li>
+                        <li><p>Location: 100 Smart Street, Norwich, UK</p></li>
+                    </ul>
+                    <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2023  The Crown Hotel | All rights reserved</p>
+        </div>
+     </footer>
+     <script src="/js/booking-button.js" defer></script>
+    <script src="/js/homepage-button.js" defer></script>
+    <script src="/js/payment-button.js" defer></script>
+    <script src="/js/scroll-view.js" defer></script>
+    </body>
+
+</html>

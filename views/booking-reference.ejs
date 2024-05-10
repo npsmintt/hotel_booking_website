@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Reference</title>
+        <link rel="stylesheet" href="../css/header-footer.css">
+        <link rel="stylesheet" href="../css/booking-reference.css">
+        <script src="https://kit.fontawesome.com/cc44fc4986.js" crossorigin="anonymous"></script>
+        <!-- import font family GFS Didot -->
+        <link href="https://fonts.cdnfonts.com/css/gfs-didot" rel="stylesheet">
+        <link rel="icon" href="images/logo_hotel_black.png" type="image/icon type">
+        <!-- hambuger -->
+        <script src="/js/toggle-bar.js" defer></script>
+</head>
+
+<body>
+    <header id="navbar">
+        <nav class="navbar-container container">
+            <a href="/" class="home-link"><img src="../images/logo_hotel_black.png" alt="Home"></a>
+            <!-- begin toggle button -->
+            <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <!-- end toggle button -->
+            <div id="navbar-menu" aria-labelledby="navbar-toggle">
+            <ul class="navbar-links">
+                <li class="navbar-item"><a class="navbar-link" href="/about-us">About Us</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/rooms-facilities">Rooms & Facilities</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/attractions">Attractions</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/manage-booking">Manage Booking</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/support">Support</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/booking">Book a Stay</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="holiday-decor">
+            <img src="https://media.giphy.com/media/lRuBBB9k4XmqUtPyTy/giphy.gif" alt="Christmas Lights">
+            <img src="https://media.giphy.com/media/lXr0aJC0t28ieBTfBP/giphy.gif" alt="Christmas Tree">
+            <img src="https://media.giphy.com/media/lRuBBB9k4XmqUtPyTy/giphy.gif" alt="Christmas Lights">
+        </div>
+        <div class="booking-reference">
+            <div class="reference-title">
+                <h1>Booking Reference <%= bookingReference %></h1>
+            </div>
+          
+            <div class="reference-box">
+                <div class="thank-you-msg">
+                    <img src="https://media.giphy.com/media/IvGxz58TPDV0o0PmDZ/giphy.gif" alt="hat">
+                    <h3>Thank you! Your booking is confirmed.</h3>
+                </div>
+                <div class="detailed-msg">
+                    <div class="welcome-msg">
+                        <p>Dear <%= firstName %>,</p>
+                        <p>we are delighted to welcome you to the Crown Hotel. Your booking confirmation has been sent to your email.</p>
+                        <p>We look forward to welcoming you on the check-in date!</p>
+                    </div>
+                    <div class="booking-msg">
+                        <div class="vertical-info">
+                            <p>Booking Details<p>
+                        </div>
+                        <div class="check">
+                            <div class="check-date">
+                                <p>Check In:</p>
+                                <p><%= checkInDate %></p>
+                                <small>From 15:00</small>
+                            </div>
+                        <hr class="vertical-hr">
+                            <div class="check-date">
+                                <p>Check Out:</p>
+                                <p><%= checkOutDate %></p>
+                                <small>Until 16:00</small>
+                            </div> 
+                        </div>  
+                </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button id="back-to-home" onclick="location.href='/'">
+                        Back to Home
+                    </button>
+                </div>
+            </div>
+            
+        <div id="santa">
+            <img src="https://media.giphy.com/media/g0HmfRvAyVYGs2V5JA/giphy.gif" alt="Santa">
+        </div>
+        
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <a href="/">
+                            <img class="footer-logo" src="/images/logo_hotel_white.png" alt="Home">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>HOTEL</h4>
+                    <ul>
+                        <li><a href="/about-us">About Us</a></li>
+                        <li><a href="/rooms-facilities">Our Rooms</a></li>
+                        <li><a href="/rooms-facilities">Our facilities</a></li>
+                        <li><a href="/attractions">Attractions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>HELP CENTER</h4>
+                    <ul>
+                        <li><a href="/support">Contact us & FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>CONTACT INFO</h4>
+                    <ul>
+                        <li><p>Phone: +44 1234 567 890</p></li>
+                        <li><p>Email: <a href="mailto:contact@crownhotel.co.uk">contact@crownhotel.co.uk</a></p></li>
+                        <li><p>Location: 100 Smart Street, Norwich, UK</p></li>
+                    </ul>
+                    <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2023  The Crown Hotel | All rights reserved</p>
+        </div>
+     </footer>
+     <script src="/js/payment-button.js" defer></script>
+     <script src="/js/booking-button.js" defer></script>
+     <script src="/js/homepage-button.js" defer></script>
+     <script src="/js/santa.js" defer></script>
+</body>
+</html>

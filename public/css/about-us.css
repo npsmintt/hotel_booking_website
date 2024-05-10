@@ -1,0 +1,244 @@
+
+
+/* Used .banner style from the css_global.css, just need to change the background picture */
+
+.img-container {
+  height: 700px;
+  background-image: url("../images/banner005.jpg"); 
+  background-color: rgba(0, 0, 0, 0.4); 
+  background-blend-mode: multiply; 
+}
+
+h1 {
+  font-size: 110px;
+}
+
+.abt-nav {
+  display: flex; 
+  align-items: center; 
+  max-width: 100%; 
+  margin: 60px; 
+}
+
+.abt-nav a {
+  display: inline-block; 
+  color: #000000; 
+  text-align: center; 
+  transition: 0.45s; 
+  font-size: 30px;
+  text-decoration: none; 
+  margin-right: 60px; 
+}
+
+.abt-nav a:hover {
+  color: grey; 
+  text-decoration: underline; 
+  transition: 0.45s; 
+  font-size: 32px; 
+}
+
+/* About section container style */
+.abt-container {
+  display: flex; 
+  align-items: center; 
+  flex-direction: row; 
+  justify-content: space-between; 
+  max-width: 100%; 
+  margin: 60px; 
+  border-radius: 8px; 
+  height: 100vh; 
+}
+
+.abt-container img {
+  display: flex;
+  justify-self: center; 
+  width: 30%;
+  height: 80vh;
+  margin: 5%;
+}
+
+.abt-container img:hover {
+  transform: scale(1.2); 
+  transition: 0.45s; 
+}
+
+/* About section text style */
+.abt-text {
+  max-width: 100%;
+  padding: 60px 5%; 
+  height: 40%; 
+  font-size: 1.5em; 
+}
+
+.abt-text p {
+  line-height: 1.7em;
+}
+
+.abt-text p:hover {
+  transform: scale(1.2); 
+  transition: 0.45s; 
+}
+
+.fa-solid {
+  color: #3b3633;
+  padding: 0 20px;
+  font-size: 1.5em;
+}
+
+/* Team section styles */
+.team-container {
+  display: flex; 
+  justify-content: space-around; 
+  margin-top: 10%; 
+}
+
+.team-member {
+  text-align: center; 
+  margin: 20px; 
+  width: 200px; 
+}
+
+.team-member img {
+  border-radius: 50%; 
+  max-width: 120%; 
+}
+
+#team {
+  display: none; 
+}
+
+.team-member h2 {
+  margin-top: 50px; 
+  font-size: 30px; 
+}
+
+.team-member h3 {
+  margin-top: 30px; 
+  font-size: 20px; 
+}
+
+.team-member p {
+  margin-top: 30px; 
+  text-align: center; 
+  font-size: 15px; 
+  color: #555; 
+}
+
+@media (max-width: 548px) {
+  .img-container {
+    height: 200px;
+  }
+  .abt-container {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+  }
+  .team-container {
+    flex-direction: column; 
+    transform: translateX(16%); 
+  }
+  .team-member {
+    width: 50%; 
+  }
+
+  .abt-container img {
+    width: 100%; 
+  }
+  .abt-nav a {
+    margin-right: 40px; 
+    font-size: 20px; 
+  }
+  .abt-nav a:hover {
+    font-size: 22px; 
+  }
+
+  .banner {
+    height: 100vh; 
+  }
+  .abt-text {
+    min-width: 100%; 
+    padding: 40px;
+    box-sizing: border-box; 
+    font-size: 1em;
+  }
+}
+@media (max-width: 768px) {
+  .img-container {
+    height: 200px;
+  }
+  .abt-container {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+  }
+  .team-container {
+    flex-direction: column; 
+    transform: translateX(16%); 
+  }
+  .team-member {
+    width: 50%; 
+  }
+
+  .abt-container img {
+    width: 100%; 
+  }
+  .abt-nav a {
+    margin-right: 40px; 
+    font-size: 20px; 
+  }
+  .abt-nav a:hover {
+    font-size: 22px; 
+  }
+
+  .banner {
+    height: 100vh; 
+  }
+  .abt-text {
+    min-width: 100%; 
+    padding: 40px;
+    box-sizing: border-box; 
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .img-container {
+    height: 200px;
+  }
+  .abt-container {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+  }
+  .team-container {
+    flex-direction: column; 
+    transform: translateX(16%); 
+  }
+  .team-member {
+    width: 50%; 
+  }
+
+  .abt-container img {
+    width: 100%; 
+  }
+  .abt-nav a {
+    margin-right: 40px; 
+    font-size: 20px; 
+  }
+  .abt-nav a:hover {
+    font-size: 22px; 
+  }
+
+  .banner {
+    height: 100vh; 
+  }
+  .abt-text {
+    min-width: 100%; 
+    padding: 40px;
+    box-sizing: border-box; 
+    font-size: 1em;
+  }
+}
+
+
+

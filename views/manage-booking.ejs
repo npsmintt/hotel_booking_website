@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The Crown Hotel</title>
+        <!-- CSS for header & footer -->
+        <link href="../css/header-footer.css" rel="stylesheet">
+        <!-- icon from fontawesome -->
+        <script src="https://kit.fontawesome.com/cc44fc4986.js" crossorigin="anonymous"></script>
+        <!-- import font family GFS Didot -->
+        <link href="https://fonts.cdnfonts.com/css/gfs-didot" rel="stylesheet">
+        <link rel="icon" href="images/logo_hotel_black.png" type="image/icon type">
+        <!-- hambuger -->
+        <script src="../js/toggle-bar.js" defer></script>
+        <!-- page-specific CSS stylesheet -->
+        <link rel="stylesheet" href="../css/manage-booking.css">
+        <!-- page js -->
+    </head>
+    <body>
+        <header id="navbar">
+            <nav class="navbar-container container">
+                <a href="/" class="home-link"><img src="../images/logo_hotel_black.png" alt="Home"></a>
+                <!-- begin toggle button -->
+                <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <!-- end toggle button -->
+                <div id="navbar-menu" aria-labelledby="navbar-toggle">
+                <ul class="navbar-links">
+                    <li class="navbar-item"><a class="navbar-link" href="/about-us">About Us</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/rooms-facilities">Rooms & Facilities</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/attractions">Attractions</a></li>
+                    <li class="navbar-item active"><a class="navbar-link" href="/manage-booking">Manage Booking</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="/support">Support</a></li>
+                    <li class="navbar-item"><a id="bookAStayLink" class="navbar-link" href="/booking">Book a Stay</a></li>
+                </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- put your content here -->
+         <main>
+            <h1>View or cancel your booking</h1>
+            <div>
+                <h3>Booking Reference</h3>
+                <form  action="" id="form">
+                        <label>
+                            <input id="bookingReference" class="input" type="text" name="bookingReference" required/>
+                        </label>                  
+                        <button ID="search" >
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Search
+                        </button>
+                </form>
+            </div>
+            <div>
+                <a href="/support" id="support_link">Need help?</a>
+            </div>
+        </main>
+        <!-- end content -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <a href="/">
+                                <img class="footer-logo" src="/images/logo_hotel_white.png" alt="Home">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>HOTEL</h4>
+                        <ul>
+                            <li><a href="/about-us">About Us</a></li>
+                            <li><a href="/rooms-facilities">Our Rooms</a></li>
+                            <li><a href="/rooms-facilities">Our facilities</a></li>
+                            <li><a href="/attractions">Attractions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>HELP CENTER</h4>
+                        <ul>
+                            <li><a href="/support">Contact us & FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>CONTACT INFO</h4>
+                        <ul>
+                            <li><p>Phone: +44 1234 567 890</p></li>
+                            <li><p>Email: <a href="mailto:contact@crownhotel.co.uk">contact@crownhotel.co.uk</a></p></li>
+                            <li><p>Location: 100 Smart Street, Norwich, UK</p></li>
+                        </ul>
+                        <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023  The Crown Hotel | All rights reserved</p>
+            </div>
+         </footer>
+         <script>
+            document.getElementById("search").addEventListener("click", async function (event) {
+                //we don't want to automatically submit when the customer enters a value, so better to prevent default
+                event.preventDefault(); 
+        
+                // get the booking reference value (I used Pooja's code here)
+                var bookingReference = document.getElementById("bookingReference").value;
+        
+                // modified Pooja's code to construct the URI component based on the booking refernece
+                var url = "/booking-details/" + encodeURIComponent(bookingReference);
+    
+                try {
+                    //Make a request to the server using the Fetch API
+                    const response = await fetch(url);
+                    //Check if the response status is ok(200)
+                    if (response.ok) {
+                        // direct to the booking details page (pooja)
+                        window.location.href = url;
+                    } else if (response.status === 404) {
+                        alert("Booking reference not found");
+                    } else {
+                        alert("Booking reference not found");
+                        console.error("Error". response.statusText);
+                    }
+                } catch(error) {
+                    console.error("Error:", error.message);
+                }
+            });
+        </script>
+</body>
+</html>
