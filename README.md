@@ -1,4 +1,4 @@
-Hotel booking website for both customers and hotel employee (Receptionist & Housekeeper)
+Hotel booking website for both customers and hotel employee (Receptionist & Housekeeper)<br>
 Codes are the example for customer pages
 
 Customer Requirements
